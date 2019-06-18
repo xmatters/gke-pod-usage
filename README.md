@@ -30,3 +30,25 @@ gcloud config set project <project>
 gcloud container clusters get-credentials <cluster> --zone <zone> --project <project>
 python3 pod_usage.py <namespace>
 ```
+
+## Results
+```
+> python3.6 pod_usage.py namespace
+NAME                                                             MEMORY LIMIT     MEMORY REQUEST   MEMORY USED      DIFFERENCE
+namespace-podname-5c559b96df-g2c6b                               6.8 G            2.4 G            851.0 M          -1.5 G
+namespace-podname-7978ff7bbb-phds8                               6.8 G            2.4 G            1.3 G            -1.1 G
+namespace-podname-7d6b6d4b9c-tgtjk                               6.8 G            2.4 G            982.0 M          -1.4 G
+namespace-podname-f7d65545f-8mbqk                                6.8 G            2.4 G            929.0 M          -1.5 G
+namespace-podname-8bc6f6946-cjbqz                                6.8 G            2.4 G            958.0 M          -1.4 G
+namespace-podname-5f75b4878c-ddhgb                               4.8 G            2.4 G            1.0 G            -1.3 G
+namespace-podname-d9c8f8596-qc428                                6.8 G            2.4 G            4.2 G            1.8 G
+namespace-podname-58b78d865-zfjq9                                6.8 G            2.4 G            923.0 M          -1.5 G
+namespace-podname-54cd84fc4-5lv9z                                6.8 G            2.4 G            779.0 M          -1.6 G
+namespace-podname-9b548957-ljjh9                                 6.8 G            2.4 G            909.0 M          -1.5 G
+namespace-podname-676974b948-fj9n9                               4.8 G            2.4 G            979.0 M          -1.4 G
+namespace-podname-d69c4db89-77tj8                                4.8 G            2.4 G            1.0 G            -1.3 G
+namespace-podname-579f9d8848-fj5vp                               2.2 G            228.0 M          34.0 M           -194.0 M
+namespace-podname-668b4b54-lfp6z                                 2.2 G            228.0 M          1.1 G            899.0 M
+TOTAL                                                            79.5 G           28.9 G           15.8 G           -13.2 G
+
+```
